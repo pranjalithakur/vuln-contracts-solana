@@ -15,14 +15,14 @@ pub mod integer_overflow_underflow {
 
     pub fn increment(ctx: Context<Increment>) -> Result<()> {
         let admin_state = &mut ctx.accounts.admin_account;
-        admin_state.counter += 1;  // Vulnerable to overflow
+        admin_state.counter += 1;  
         msg!("Counter incremented to: {}", admin_state.counter);
         Ok(())
     }
 
     pub fn decrement(ctx: Context<Decrement>) -> Result<()> {
         let admin_state = &mut ctx.accounts.admin_account;
-        admin_state.counter -= 1;  // Vulnerable to underflow
+        admin_state.counter -= 1;  
         msg!("Counter decremented to: {}", admin_state.counter);
         Ok(())
     }

@@ -10,13 +10,10 @@ pub mod improper_account_closing {
         let account_to_close = &mut ctx.accounts.account_to_close;
         let destination = &mut ctx.accounts.destination;
 
-        // Read the current lamports in the account to be closed.
         let lamports_to_transfer = **account_to_close.lamports.borrow();
 
-        // Transfer all lamports from account_to_close to destination.
         **destination.lamports.borrow_mut() += lamports_to_transfer;
 
-        // Set account_to_close lamports to 0. 
         **account_to_close.lamports.borrow_mut() = 0;
 
         Ok(())
