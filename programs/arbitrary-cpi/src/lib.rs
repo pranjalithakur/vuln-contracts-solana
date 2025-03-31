@@ -5,7 +5,7 @@ use anchor_lang::solana_program::program::invoke;
 declare_id!("GNAx7Bnrdd8xVkd4ZzHeCeQutpAA39yreNAghryf4WqK");
 
 #[program]
-pub mod arbitrary_cpi {
+pub mod arbitrary_Cpi {
     use super::*;
 
     pub fn update_admin(ctx: Context<UpdateAdmin>, new_admin: Pubkey) -> Result<()> {

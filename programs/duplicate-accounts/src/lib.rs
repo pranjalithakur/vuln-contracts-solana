@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 declare_id!("GNAx7Bnrdd8xVkd4ZzHeCeQutpAA39yreNAghryf4WqK");
 
 #[program]
-pub mod duplicate_accounts {
+pub mod duplicateAccounts {
     use super::*;
 
     pub fn update(ctx: Context<Update>, a: u64, b: u64) -> Result<()> {

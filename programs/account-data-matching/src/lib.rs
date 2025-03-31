@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 declare_id!("GNAx7Bnrdd8xVkd4ZzHeCeQutpAA39yreNAghryf4WqK");
 
 #[program]
-pub mod account_data_matching {
+pub mod accountData_matching {
     use super::*;
 
     pub fn update_admin(ctx: Context<UpdateAdmin>, new_admin: Pubkey) -> Result<()> {
