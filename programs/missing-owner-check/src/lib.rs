@@ -2,6 +2,18 @@ use anchor_lang::prelude::*;
 
 declare_id!("GNAx7Bnrdd8xVkd4ZzHeCeQutpAA39yreNAghryf4WqK");
 
+/**
+ * INFORMATIONAL SEVERITY:
+ * --------------------------------
+ * The `update_admin` instruction only checks that the `authority` is a signer, but it does not verify that
+ * the signer is the current admin stored in the `admin_account`. This omission can allow any valid signer
+ * to update the admin, potentially leading to unauthorized changes in ownership.
+ *
+ * Although the unchecked accounts are marked intentionally for demonstration purposes, it is recommended
+ * to implement a proper owner verification check in production to ensure that only the current admin can
+ * update the admin state.
+ * --------------------------------
+ */
 #[program]
 pub mod missing_owner_check {
     use super::*;
