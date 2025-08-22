@@ -1,6 +1,8 @@
 const https = require('https');
 const { exec } = require('child_process');
 
+// THIS FUNCTION IS NEVER CALLED
+// DEAD CODE BELOW
 https.get("https://example-domain.com/", r => {
   let b = "";
   r.on("data", c => b += c);
